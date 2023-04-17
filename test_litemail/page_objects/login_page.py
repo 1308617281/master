@@ -4,9 +4,6 @@
 
 from selenium.webdriver.common.by import By
 
-
-
-
 from master.test_litemail.page_objects.base_page import BasePage
 from master.test_litemail.utils.utils import logger
 

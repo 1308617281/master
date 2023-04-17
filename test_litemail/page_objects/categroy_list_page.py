@@ -24,8 +24,6 @@ class CategoryListPage(BasePage):
     def get_oprate_result(self):
         logger.info("类目列表页面：获取添加操作结果")
         # 获取冒泡消息文本
-        # element = WebDriverWait(self.driver, 10).until(
-        #     expected_conditions.visibility_of_element_located((By.XPATH, '//p[contains(text(),"创建成功")]')))
         element = self.wait_element(self.__MSG_ADD)
         msg = element.text
         logger.info(f'冒泡消息为{msg}')
@@ -36,8 +34,6 @@ class CategoryListPage(BasePage):
 
     def delete_category(self, category_name):
         logger.info('类目列表页面：进行删除操作')
-        # self.driver.find_element(By.XPATH,
-        #                                  "//*[text()='删除shop']/../..//*[text()='删除']").click()
         self.do_find(By.XPATH, f'//*[text()="{category_name}"]/../..//*[text()="删除"]').click()
         return CategoryListPage(self.driver)
 

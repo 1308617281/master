@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-# from master.test_litemail.utils.utils import logger
+from master.test_litemail.utils.utils import logger
 
 
 class TestLitemall:
@@ -120,6 +120,5 @@ class TestLitemall:
         # 解决： 确认该元素不存在后，再捕获
         res = self.driver.find_elements(By.XPATH,
                                         "//*[text()='删除商品测试']")
-        # logger.info(f"断言获取到的实际结果为{res}")
-        logging.info(f"断言获取到的实际结果为{res}")
+        logger.info(f"断言获取到的实际结果为{res}")
         assert res == []
