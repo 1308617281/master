@@ -1,6 +1,3 @@
-# _*_ coding: utf-8 _*_
-# @time     : 2023/3/7 8:33
-# @Auther   : xiao
 
 from selenium.webdriver.common.by import By
 
